@@ -7,6 +7,14 @@ body {
   background-color: #fff;
 }
 
+.navbar .navbar-brand {
+  margin-top: 14px;
+  width: 210px;
+  background: url('/bootstrap/techfeedy/images/logo.png') 14px 0 no-repeat;
+  display: inline-block;
+  text-indent: -9999px;
+}
+
 .block {
   font-size: 13px !important;
   float: left;
