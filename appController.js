@@ -5,6 +5,11 @@ app.controller ('techFeedController', function($scope, $http) {
     $scope.newsFeed = {};
     
     $scope.init = function ( ) { 
+        $scope.hackerSpinner = true;
+        $scope.productHuntSpinner = true;
+        $scope.techcrunchSpinner = true;
+        $scope.techmemeSpinner = true;
+        
         $scope.getHackerNews( );
         $scope.getProductHunt( );
         $scope.getTechCrunch( );
@@ -15,6 +20,7 @@ app.controller ('techFeedController', function($scope, $http) {
     $scope.getHackerNews = function ( ) {
         $http.get('http://techfeedyservice.herokuapp.com/hackernews')
         .success(function(response) {
+            $scope.hackerSpinner = false;
             $scope.newsFeed.hackerNews = response;
         });        
     } 
@@ -22,6 +28,7 @@ app.controller ('techFeedController', function($scope, $http) {
     $scope.getProductHunt = function ( ) {
         $http.get('http://techfeedyservice.herokuapp.com/producthunt')
         .success(function(response) {
+            $scope.productHuntSpinner = false;
             $scope.newsFeed.productHunt = response;
         });        
     }   
@@ -29,6 +36,7 @@ app.controller ('techFeedController', function($scope, $http) {
     $scope.getTechCrunch = function ( ) {
         $http.get('http://techfeedyservice.herokuapp.com/techcrunch')
         .success(function(response) {
+            $scope.techcrunchSpinner = false;
             $scope.newsFeed.techcrunch = response;
         });        
     } 
@@ -36,6 +44,7 @@ app.controller ('techFeedController', function($scope, $http) {
     $scope.getTechMeme = function ( ) {
         $http.get('http://techfeedyservice.herokuapp.com/techmeme')
         .success(function(response) {
+            $scope.techmemeSpinner = false;
             $scope.newsFeed.techmeme = response;
         });        
     }     
