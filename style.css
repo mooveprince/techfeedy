@@ -46,6 +46,10 @@ body {
   color: #da552f !important;
 }
 
+h2 a {
+    color: #da552f !important;
+}
+
 .list li {
   padding: 7px;
   border-bottom: 1px solid #ccc;
