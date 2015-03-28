@@ -59,6 +59,10 @@ body {
   color: #0c3a8c;
 }
 
+.list li span {
+  color: #999;
+}
+
 footer {
   border-top: 1px solid #f0f0f0;
   padding-top: 1em;
