@@ -70,6 +70,10 @@ footer {
   color: #999;
 }
 
+.middle {
+  text-align: center;
+}
+
 ::-webkit-scrollbar-thumb {
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.5);
