@@ -10,7 +10,8 @@ body {
 .navbar .navbar-brand {
   margin-top: 14px;
   width: 210px;
-  background: url('/angular/techfeedy/images/logo.png') 14px 0 no-repeat;
+ /* background: url('./images/logo.png') 14px 0 no-repeat; */
+    background: url('./images/colorlogo.png') 14px 0 no-repeat; 
   display: inline-block;
   text-indent: -9999px;
 }
@@ -42,7 +43,7 @@ body {
   margin: 0;
   padding: 0.5em 0;
   text-align: center;
-  color: #fc3e24 !important;
+  color: #da552f !important;
 }
 
 .list li {
