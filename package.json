@@ -1,5 +1,9 @@
 {
   "name": "techfeedy",
   "version": "0.0.0",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "path": "^0.4.9",
+    "request": "^2.48.0"
+  }    
 }
