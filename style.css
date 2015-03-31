@@ -10,8 +10,7 @@ body {
 .navbar .navbar-brand {
   margin-top: 14px;
   width: 210px;
- /* background: url('./images/logo.png') 14px 0 no-repeat; */
-    background: url('./images/colorlogo2.png') 14px 0 no-repeat; 
+  background: url('./images/colorlogo2.png') 14px 0 no-repeat; 
   display: inline-block;
   text-indent: -9999px;
 }
