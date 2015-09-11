@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tweet Trends </title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script>
+      var app = angular.module('twittertrends', []);
+
+      app.controller ('trendsConroller', function($scope, $http) {
+
+        $scope.init = function () {
+          $scope.getTrends ( );
+        }
+
+        $scope.getTrends = function ( ) {
+
+          var queryParams = window.location.search;
+          var url = 'http://techfeedyservice.herokuapp.com/tweet/trends';
+
+          if (queryParams.length > 1) {
+            var query = queryParams.split("&");
+            var lat = query[0] ;
+            var long = query[1];
+            url += lat + '&' + long;
+          }
+
+          console.log ("URL to Twitter " + url);
+          $http.get (url).success(function(response) {
+            $scope.trends = response[0].trends;
+          });
+        }
+
+      });
+    </script>
+  </head>
+  <body ng-app="twittertrends">
+      <h1> Trends </h1>
+      <div class="container" ng-controller="trendsConroller" ng-init="init()">
+        <li ng-repeat="trend in trends">
+          <a href="{{trend.url}}" target="_blank">{{trend.name}}</a>
+        </li>
+      </div>
+  </body>
+</html>
