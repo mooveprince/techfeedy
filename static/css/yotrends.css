@@ -31,7 +31,7 @@ body {
   font-size : 1.8em;
 }
 
-.list li a {
+a {
   text-decoration: none;
   color : #ffffff;
 }
@@ -40,7 +40,7 @@ body {
   position: relative;
   float: left;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .heading {
@@ -52,6 +52,13 @@ body {
   width: 100%;
   font-size: 1.3em;
 }
+
+.footer {
+  padding-left: 10px;
+  text-align: center;
+  padding-top: 30px;
+}
+
 
 @media screen and (max-width: 600px) {
   .list li {
@@ -74,7 +81,5 @@ body {
     width: 100%;
     margin: 0;
   }
-
-
 
 }

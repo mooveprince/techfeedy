@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:700,400">
     <link href="./static/css/yotrends.css" rel="stylesheet">
-    <script src= "./static/js/angular_1.3.14.min.js"></script>    
+    <script src= "./static/js/angular_1.3.14.min.js"></script>
     <script>
       var app = angular.module('twittertrends', []);
 
@@ -52,7 +52,6 @@
                 Trend for {{location}}
               </div>
             </div>
-
             <div class="list">
               <li ng-repeat="trend in trends">
                 <div class="content-row">
@@ -61,8 +60,15 @@
               </li>
             </div>
           </div>
-
       </div>
+
+      <div class="content-row">
+          <div class="footer">
+            <a href="http://www.twitter.com/mooveprince" target="_blank">Contact</a>
+          </div>
+      </div>
+
     </div>
+
   </body>
 </html>
