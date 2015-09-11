@@ -2,9 +2,13 @@
 <html>
   <head>
     <title>Tweet Trends </title>
-
-    <script src= "./static/js/angular_1.3.14.min.js"></script>
+    <title>YOMYPACKAGE</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:700,400">
     <link href="./static/css/yotrends.css" rel="stylesheet">
+    <script src= "./static/js/angular_1.3.14.min.js"></script>    
     <script>
       var app = angular.module('twittertrends', []);
 
@@ -39,23 +43,25 @@
   <body ng-app="twittertrends">
       <div class="container" ng-controller="trendsConroller" ng-init="init()">
         <div class="cellophane">
-          <div class="content-row with-space">
-            <div class="heading">
-              YOTREND
+          <div class="content">
+            <div class="content-row with-space">
+              <div class="heading">
+                YOTREND
+              </div>
+              <div class="sub-heading">
+                Trend for {{location}}
+              </div>
             </div>
-            <div class="sub-heading">
-              Trend for {{location}}
+
+            <div class="list">
+              <li ng-repeat="trend in trends">
+                <div class="content-row">
+                  <a href="{{trend.url}}" target="_blank">{{trend.name}}</a>
+                </div>
+              </li>
             </div>
           </div>
 
-          <div class="list">
-            <li ng-repeat="trend in trends">
-              <div class="content-row">
-                <a href="{{trend.url}}" target="_blank">{{trend.name}}</a>
-              </div>
-            </li>
-        </div>
-        
       </div>
     </div>
   </body>
