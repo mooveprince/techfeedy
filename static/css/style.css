@@ -15,6 +15,11 @@ body {
   text-indent: -9999px;
 }
 
+.navbar-default {
+  background-color: #fff;
+  border-color: #fff;      
+}
+
 .block {
   font-size: 13px !important;
   float: left;
