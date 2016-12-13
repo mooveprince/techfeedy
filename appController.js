@@ -18,7 +18,7 @@ app.controller ('techFeedController', function($scope, $http) {
     }
     
     $scope.getHackerNews = function ( ) {
-        $http.get('http://techfeedyservice.herokuapp.com/hackernews')
+        $http.get('https://techfeedyservice.herokuapp.com/hackernews')
         .success(function(response) {
             $scope.hackerSpinner = false;
             $scope.newsFeed.hackerNews = response;
@@ -26,7 +26,7 @@ app.controller ('techFeedController', function($scope, $http) {
     } 
     
     $scope.getProductHunt = function ( ) {
-        $http.get('http://techfeedyservice.herokuapp.com/producthunt')
+        $http.get('https://techfeedyservice.herokuapp.com/producthunt')
         .success(function(response) {
             $scope.productHuntSpinner = false;
             $scope.newsFeed.productHunt = response;
@@ -34,7 +34,7 @@ app.controller ('techFeedController', function($scope, $http) {
     }   
     
     $scope.getTechCrunch = function ( ) {
-        $http.get('http://techfeedyservice.herokuapp.com/techcrunch')
+        $http.get('https://techfeedyservice.herokuapp.com/techcrunch')
         .success(function(response) {
             $scope.techcrunchSpinner = false;
             $scope.newsFeed.techcrunch = response;
@@ -42,7 +42,7 @@ app.controller ('techFeedController', function($scope, $http) {
     } 
     
     $scope.getTechMeme = function ( ) {
-        $http.get('http://techfeedyservice.herokuapp.com/techmeme')
+        $http.get('https://techfeedyservice.herokuapp.com/techmeme')
         .success(function(response) {
             $scope.techmemeSpinner = false;
             $scope.newsFeed.techmeme = response;
