@@ -1,11 +1,10 @@
-FROM node:latest as build-step
-RUN mkdir -p /app
-WORKDIR /app
-COPY package.json /app
-RUN npm install
-COPY . /app
+FROM node:alpine as builder
+WORKDIR '/app'
+COPY ./package.json ./
+RUN npm install 
+COPY . . 
 RUN npm run build --prod
 
-FROM nginx:1.20.1
-COPY --from=build-step /app/dist/techfeedy /usr/share/nginx/html
-EXPOSE 4200:80
+FROM nginx 
+EXPOSE 80
+COPY --from=builder /app/dist/techfeedy /usr/share/nginx/html
