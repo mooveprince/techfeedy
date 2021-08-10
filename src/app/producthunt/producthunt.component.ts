@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Posts } from '../model/Posts';
+import { ProductTrends } from '../model/productTrends';
 import { ProducthuntService } from '../service/producthunt.service';
 
 
@@ -9,13 +11,13 @@ import { ProducthuntService } from '../service/producthunt.service';
 })
 export class ProducthuntComponent implements OnInit {
 
-  trends: any[];
+  trends: ProductTrends;
 
   constructor(private service:ProducthuntService) { }
 
   ngOnInit() {
     this.service.getAll()
-    .subscribe(trends => this.trends = trends.posts);
+    .subscribe((trends:ProductTrends) => this.trends = trends  );
   }
 
 }

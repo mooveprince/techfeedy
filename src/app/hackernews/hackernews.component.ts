@@ -15,7 +15,7 @@ export class HackernewsComponent implements OnInit {
 
   ngOnInit() {
     this.service.getAll()
-    .subscribe(trends => this.trends = trends.slice(0,10));
+    .subscribe((trends:Trends[]) => {this.trends = trends.slice(0,10)});
   }
 
 }

@@ -8,7 +8,7 @@ export class DataService {
   constructor(private http:HttpClient, private url:string) { }
 
   getAll () {
-    return this.http.get(this.url).pipe(map((response: any) => response.json()));
+    return this.http.get(this.url);
       
   }
 

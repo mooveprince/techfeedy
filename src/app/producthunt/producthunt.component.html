@@ -8,10 +8,12 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="list-group feedData" *ngFor = "let trend of trends">
-                  <div>
-                      <a href="{{trend.redirect_url}}" target="_blank" class="list-group-item list-group-item-action">{{trend.tagline}}</a>
-                  </div>
+                <div class="class" *ngIf="trends" >
+                    <div class="list-group feedData" *ngFor = "let trend of trends.posts.slice(0,10)">
+                        <div>
+                            <a href="{{trend.redirect_url}}" target="_blank" class="list-group-item list-group-item-action">{{trend.tagline}}</a>
+                        </div>
+                      </div>
                 </div>
             </div>
         </div>
