@@ -1,4 +1,4 @@
-import { Posts } from "./Posts";
+import { Posts } from "./posts";
 
 export interface ProductTrends {
     posts: Posts[]
